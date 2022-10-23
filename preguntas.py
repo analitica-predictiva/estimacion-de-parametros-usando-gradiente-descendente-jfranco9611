@@ -19,10 +19,10 @@ def pregunta_01():
     from sklearn.preprocessing import PolynomialFeatures
 
     # Cargue el dataset `data.csv`
-    data = pd_read_csv("data-csv")
+    data = pd.read_csv("data-csv")
 
     # Cree un objeto de tipo `PolynomialFeatures` con grado `2`
-    poly = PolinomialFeatures(degree=2)
+    poly = PolynomialFeatures(degree=2)
 
     # Transforme la columna `x` del dataset `data` usando el objeto `poly`
     x_poly = poly.fit_transform(data[["x"]])
