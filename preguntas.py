@@ -50,7 +50,7 @@ def pregunta_02():
         y_pred = np.dot(x_poly, params)
 
         # Calcule el error
-        error = [y_pred - y1 for y_pred, y1 in zip(y, y_pred)]
+        error = [y_pred - yp for y_pred, yp in zip(y, y_pred)]
 
         # Calcule el gradiente
         gradient = -2 * np.sum(np.multiply(x_poly,
